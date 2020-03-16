@@ -52,7 +52,6 @@ def help_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    print(message)
     global cursor, db
     if message.text.lower() == 'статистика':
         bot.send_message(message.chat.id, text=read_stat_from_log())
